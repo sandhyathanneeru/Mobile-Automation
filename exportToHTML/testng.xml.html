@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>testng.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000; font-style: italic;}
+.s1 { color: #0000ff; font-weight: bold;}
+.s2 { color: #000000;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #000000;}
+.s5 { color: #000080; font-weight: bold;}
+.s6 { color: #000080; font-weight: bold; font-style: italic;}
+.s7 { color: #808080; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+testng.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s3">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s5">&lt;!DOCTYPE </span><span class="s1">suite </span><span class="s5">SYSTEM </span><span class="s3">&quot;https://testng.org/testng-1.0.dtd&quot; </span><span class="s6">&gt;</span>
+&lt;<span class="s5">suite </span><span class="s1">name</span><span class="s3">=&quot;Suite&quot;</span>&gt;
+    &lt;<span class="s5">test </span><span class="s1">name</span><span class="s3">=&quot;MyDevice&quot;</span>&gt;
+        &lt;<span class="s5">parameter </span><span class="s1">name</span><span class="s3">=&quot;emulator&quot; </span><span class="s1">value</span><span class="s3">=&quot;yes&quot;</span>&gt;&lt;/<span class="s5">parameter</span>&gt;
+        &lt;<span class="s5">parameter </span><span class="s1">name</span><span class="s3">=&quot;platformName&quot; </span><span class="s1">value</span><span class="s3">=&quot;android_with_proxy&quot;</span>&gt;&lt;/<span class="s5">parameter</span>&gt;
+        &lt;<span class="s5">parameter </span><span class="s1">name</span><span class="s3">=&quot;platformVersion&quot; </span><span class="s1">value</span><span class="s3">=&quot;14&quot;</span>&gt;&lt;/<span class="s5">parameter</span>&gt;
+        &lt;<span class="s5">parameter </span><span class="s1">name</span><span class="s3">=&quot;udid&quot; </span><span class="s1">value</span><span class="s3">=&quot;Mobile_Automation&quot;</span>&gt;&lt;/<span class="s5">parameter</span>&gt;
+        &lt;<span class="s5">parameter </span><span class="s1">name</span><span class="s3">=&quot;deviceName&quot; </span><span class="s1">value</span><span class="s3">=&quot;Mobile_Automation&quot;</span>&gt;&lt;/<span class="s5">parameter</span>&gt;
+        &lt;<span class="s5">parameter </span><span class="s1">name</span><span class="s3">=&quot;systemPort&quot; </span><span class="s1">value</span><span class="s3">=&quot;7878&quot; </span>/&gt;
+        &lt;<span class="s5">parameter </span><span class="s1">name</span><span class="s3">=&quot;chromeDriverPort&quot; </span><span class="s1">value</span><span class="s3">=&quot;8787&quot; </span>/&gt;
+<span class="s7">&lt;!--        Emulator-5556--&gt;</span>
+<span class="s7">&lt;!--        Emulator-5556--&gt;</span>
+
+        &lt;<span class="s5">classes</span>&gt;
+            &lt;<span class="s5">class </span><span class="s1">name</span><span class="s3">=&quot;com.tests.android.dp.ProfileNameEdit&quot;</span>&gt;&lt;/<span class="s5">class</span>&gt;
+<span class="s7">&lt;!--            &lt;class name=&quot;com.tests.android.dp.ProfileEmailEdit&quot;&gt;&lt;/class&gt;--&gt;</span>
+<span class="s7">&lt;!--            &lt;class name=&quot;com.tests.android.dp.ProfilePaswordEdit&quot;&gt;&lt;/class&gt;--&gt;</span>
+<span class="s7">&lt;!--            &lt;class name=&quot;com.tests.android.dp.CommunityMainTabClick&quot;&gt;&lt;/class&gt;--&gt;</span>
+        &lt;/<span class="s5">classes</span>&gt;
+    &lt;/<span class="s5">test</span>&gt;
+
+
+
+<span class="s7">&lt;!--                 &lt;test name=&quot;emulator-5554&quot;&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;parameter name=&quot;emulator&quot; value=&quot;no&quot;&gt;&lt;/parameter&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;parameter name=&quot;platformName&quot; value=&quot;ios_with_proxy&quot;&gt;&lt;/parameter&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;parameter name=&quot;platformVersion&quot; value=&quot;15.5&quot;&gt;&lt;/parameter&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;parameter name=&quot;udid&quot; value=&quot;FF2AFB38-897C-49B0-9DBE-66B1E1F76976&quot;&gt;&lt;/parameter&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;parameter name=&quot;deviceName&quot; value=&quot;iPhone 13&quot;&gt;&lt;/parameter&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;parameter name=&quot;systemPort&quot; value=&quot;7879&quot;/&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;parameter name=&quot;chromeDriverPort&quot; value=&quot;8788&quot;/&gt;--&gt;</span>
+<span class="s7">&lt;!--                 &lt;classes&gt;--&gt;</span>
+
+<span class="s7">&lt;!--                     &lt;class name=&quot;com.tests.ios.dp.AddProductToCartIOS&quot;/&gt;--&gt;</span>
+
+<span class="s7">&lt;!--                     &lt;class name=&quot;com.tests.ios.store.StoreModeHeaderWithLogin&quot;/&gt;--&gt;</span>
+
+<span class="s7">&lt;!--                 &lt;/classes&gt;--&gt;</span>
+<span class="s7">&lt;!--             &lt;/test&gt;--&gt;</span>
+
+
+&lt;/<span class="s5">suite</span>&gt;
+</pre>
+</body>
+</html>

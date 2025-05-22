@@ -1,0 +1,281 @@
+<html>
+<head>
+<title>pom.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #000080; font-weight: bold;}
+.s2 { color: #0000ff; font-weight: bold;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #000000;}
+.s5 { color: #000000;}
+.s6 { color: #808080; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+pom.xml</font>
+</center></td></tr></table>
+<pre>&lt;<span class="s1">project </span><span class="s2">xmlns:xsi</span><span class="s3">=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+	<span class="s2">xmlns</span><span class="s3">=&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+	<span class="s2">xsi:schemaLocation</span><span class="s3">=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;
+	&lt;<span class="s1">modelVersion</span>&gt;4.0.0&lt;/<span class="s1">modelVersion</span>&gt;
+	&lt;<span class="s1">groupId</span>&gt;com.truglobal&lt;/<span class="s1">groupId</span>&gt;
+	&lt;<span class="s1">artifactId</span>&gt;sephora-mobile-automation&lt;/<span class="s1">artifactId</span>&gt;
+	&lt;<span class="s1">version</span>&gt;0.0.1-SNAPSHOT&lt;/<span class="s1">version</span>&gt;
+
+	&lt;<span class="s1">properties</span>&gt;
+		&lt;<span class="s1">project.build.sourceEncoding</span>&gt;UTF-8&lt;/<span class="s1">project.build.sourceEncoding</span>&gt;
+		&lt;<span class="s1">maven.compiler.source</span>&gt;11&lt;/<span class="s1">maven.compiler.source</span>&gt;
+		&lt;<span class="s1">maven.compiler.target</span>&gt;11&lt;/<span class="s1">maven.compiler.target</span>&gt;
+		&lt;<span class="s1">testng.version</span>&gt;7.8.0&lt;/<span class="s1">testng.version</span>&gt;
+		&lt;<span class="s1">appium-java-client.version</span>&gt;8.3.0&lt;/<span class="s1">appium-java-client.version</span>&gt;
+		&lt;<span class="s1">apache-poi.version</span>&gt;5.2.5&lt;/<span class="s1">apache-poi.version</span>&gt;
+		&lt;<span class="s1">json-path.version</span>&gt;2.7.0&lt;/<span class="s1">json-path.version</span>&gt;
+		&lt;<span class="s1">log4j.version</span>&gt;2.19.0&lt;/<span class="s1">log4j.version</span>&gt;
+		&lt;<span class="s1">extent-reports.version</span>&gt;5.0.9&lt;/<span class="s1">extent-reports.version</span>&gt;
+		&lt;<span class="s1">jackson.version</span>&gt;2.14.0&lt;/<span class="s1">jackson.version</span>&gt;
+		&lt;<span class="s1">lombok.version</span>&gt;1.18.30&lt;/<span class="s1">lombok.version</span>&gt;
+		&lt;<span class="s1">json.version</span>&gt;20220924&lt;/<span class="s1">json.version</span>&gt;
+		&lt;<span class="s1">commons-io.version</span>&gt;2.15.0&lt;/<span class="s1">commons-io.version</span>&gt;
+		&lt;<span class="s1">maven-checkstyle-plugin.version</span>&gt;3.2.0&lt;/<span class="s1">maven-checkstyle-plugin.version</span>&gt;
+		&lt;<span class="s1">codestyle.version</span>&gt;1.1.0&lt;/<span class="s1">codestyle.version</span>&gt;
+		&lt;<span class="s1">checkstyle.version</span>&gt;10.5.0&lt;/<span class="s1">checkstyle.version</span>&gt;
+		&lt;<span class="s1">checkstyle.config</span>&gt;checkstyles/checkstyle.xml&lt;/<span class="s1">checkstyle.config</span>&gt;
+		&lt;<span class="s1">checkstyle.suppress</span>&gt;checkstyles/checkstyle-suppressions.xml&lt;/<span class="s1">checkstyle.suppress</span>&gt;
+		&lt;<span class="s1">ashot-version</span>&gt;1.5.4&lt;/<span class="s1">ashot-version</span>&gt;
+		&lt;<span class="s1">allure-testng-version</span>&gt;2.13.9&lt;/<span class="s1">allure-testng-version</span>&gt;
+		&lt;<span class="s1">aspectj.version</span>&gt;1.9.6&lt;/<span class="s1">aspectj.version</span>&gt;
+		&lt;<span class="s1">maven-surefire-plugin-version</span>&gt;3.0.0-M5&lt;/<span class="s1">maven-surefire-plugin-version</span>&gt;
+	&lt;/<span class="s1">properties</span>&gt;
+
+	&lt;<span class="s1">dependencies</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;io.appium&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;mitmproxy-java&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;2.0.2&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+        &lt;<span class="s1">dependency</span>&gt;
+            &lt;<span class="s1">groupId</span>&gt;org.apache.commons&lt;/<span class="s1">groupId</span>&gt;
+            &lt;<span class="s1">artifactId</span>&gt;commons-collections4&lt;/<span class="s1">artifactId</span>&gt;
+            &lt;<span class="s1">version</span>&gt;4.4&lt;/<span class="s1">version</span>&gt;
+        &lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.testng&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;testng&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${testng.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;net.lightbody.bmp&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;browsermob-core&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;2.1.5&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+        <span class="s6">&lt;!-- https://mvnrepository.com/artifact/io.netty/netty-all --&gt;</span>
+        &lt;<span class="s1">dependency</span>&gt;
+            &lt;<span class="s1">groupId</span>&gt;io.netty&lt;/<span class="s1">groupId</span>&gt;
+            &lt;<span class="s1">artifactId</span>&gt;netty-all&lt;/<span class="s1">artifactId</span>&gt;
+            &lt;<span class="s1">version</span>&gt;4.1.42.Final&lt;/<span class="s1">version</span>&gt;
+        &lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/io.appium/java-client --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;io.appium&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;java-client&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${appium-java-client.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+<span class="s6">&lt;!--		&lt;dependency&gt;--&gt;</span>
+<span class="s6">&lt;!--			&lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;--&gt;</span>
+<span class="s6">&lt;!--			&lt;artifactId&gt;selenium-support&lt;/artifactId&gt;--&gt;</span>
+<span class="s6">&lt;!--			&lt;version&gt;4.19.0&lt;/version&gt;--&gt;</span>
+<span class="s6">&lt;!--		&lt;/dependency&gt;--&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.seleniumhq.selenium&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;selenium-remote-driver&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;4.7.0&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.seleniumhq.selenium&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;selenium-java&lt;/<span class="s1">artifactId</span>&gt;
+            &lt;<span class="s1">version</span>&gt;4.7.0&lt;/<span class="s1">version</span>&gt;
+
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;ru.yandex.qatools.ashot&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;ashot&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${ashot-version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- APACHE POI DEPENDENCIES --&gt;</span>
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.apache.poi&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;poi&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${apache-poi.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.apache.poi&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;poi-ooxml&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${apache-poi.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;commons-io&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;commons-io&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${commons-io.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/com.aventstack/extentreports --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.aventstack&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;extentreports&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${extent-reports.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.jayway.jsonpath&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;json-path&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${json-path.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/org.json/json --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.json&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;json&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${json.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!--</span>
+		<span class="s6">https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.apache.logging.log4j&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;log4j-core&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${log4j.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!--</span>
+		<span class="s6">https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.apache.logging.log4j&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;log4j-api&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${log4j.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!--</span>
+		<span class="s6">https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.fasterxml.jackson.core&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;jackson-databind&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${jackson.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!--</span>
+		<span class="s6">https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.fasterxml.jackson.core&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;jackson-core&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${jackson.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.projectlombok&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;lombok&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${lombok.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;org.duraspace&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;codestyle&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${codestyle.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.puppycrawl.tools&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;checkstyle&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${checkstyle.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.opencsv&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;opencsv&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;5.5.2&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.epam.reportportal&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;agent-java-cucumber6&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;5.1.1&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.epam.reportportal&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;logger-java-logback&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;5.1.1&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.epam.reportportal&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;logger-java-log4j&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;5.1.1&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.epam.reportportal&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;agent-java-testng&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;5.1.1&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.fasterxml.jackson.core&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;jackson-annotations&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;${jackson.version}&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.google.guava&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;guava&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;22.0&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+		<span class="s6">&lt;!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker --&gt;</span>
+		&lt;<span class="s1">dependency</span>&gt;
+			&lt;<span class="s1">groupId</span>&gt;com.github.javafaker&lt;/<span class="s1">groupId</span>&gt;
+			&lt;<span class="s1">artifactId</span>&gt;javafaker&lt;/<span class="s1">artifactId</span>&gt;
+			&lt;<span class="s1">version</span>&gt;1.0.2&lt;/<span class="s1">version</span>&gt;
+		&lt;/<span class="s1">dependency</span>&gt;
+
+
+	&lt;/<span class="s1">dependencies</span>&gt;
+
+	&lt;<span class="s1">build</span>&gt;
+		&lt;<span class="s1">plugins</span>&gt;
+			&lt;<span class="s1">plugin</span>&gt;
+				&lt;<span class="s1">groupId</span>&gt;org.apache.maven.plugins&lt;/<span class="s1">groupId</span>&gt;
+				&lt;<span class="s1">artifactId</span>&gt;maven-surefire-plugin&lt;/<span class="s1">artifactId</span>&gt;
+				&lt;<span class="s1">version</span>&gt;${maven-surefire-plugin-version}&lt;/<span class="s1">version</span>&gt;
+				&lt;<span class="s1">configuration</span>&gt;
+					&lt;<span class="s1">suiteXmlFiles</span>&gt;
+						&lt;<span class="s1">suiteXmlFile</span>&gt;testng.xml&lt;/<span class="s1">suiteXmlFile</span>&gt;
+					&lt;/<span class="s1">suiteXmlFiles</span>&gt;
+					&lt;<span class="s1">properties</span>&gt;
+						&lt;<span class="s1">property</span>&gt;
+							&lt;<span class="s1">name</span>&gt;usedefaultlisteners&lt;/<span class="s1">name</span>&gt;
+							&lt;<span class="s1">value</span>&gt;true&lt;/<span class="s1">value</span>&gt; <span class="s6">&lt;!-- disabling default listeners 
+                            is optional --&gt;</span>
+						&lt;/<span class="s1">property</span>&gt;
+						&lt;<span class="s1">property</span>&gt;
+							&lt;<span class="s1">name</span>&gt;listener&lt;/<span class="s1">name</span>&gt;
+							&lt;<span class="s1">value</span>&gt;
+								com.epam.reportportal.testng.ReportPortalTestNGListener&lt;/<span class="s1">value</span>&gt;
+						&lt;/<span class="s1">property</span>&gt;
+					&lt;/<span class="s1">properties</span>&gt;
+				&lt;/<span class="s1">configuration</span>&gt;
+			&lt;/<span class="s1">plugin</span>&gt;
+
+
+		&lt;/<span class="s1">plugins</span>&gt;
+	&lt;/<span class="s1">build</span>&gt;
+&lt;/<span class="s1">project</span>&gt;
+</pre>
+</body>
+</html>

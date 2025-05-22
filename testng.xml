@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+    <test name="MyDevice">
+        <parameter name="emulator" value="yes"></parameter>
+        <parameter name="platformName" value="android"></parameter>
+        <parameter name="platformVersion" value="14"></parameter>
+<!--        <parameter name="udid" value="Mobile_Automation"></parameter>-->
+        <parameter name="udid" value="Mobile_Automation"></parameter>
+        <parameter name="deviceName" value="Mobile_Automation"></parameter>
+        <parameter name="systemPort" value="7878" />
+        <parameter name="chromeDriverPort" value="8787" />
+<!--        Emulator-5556-->
+<!--        Emulator-5556-->
+
+        <classes>
+<!--                <class name="com.tests.android.dp.AddProductToCart"></class>-->
+<!--            <class name="com.tests.android.dp.ProfileNameEdit"></class>-->
+<!--            <class name="com.tests.android.dp.ProfileEmailEdit"></class>-->
+            <class name="com.tests.android.dp.ProfilePaswordEdit"></class>
+<!--            <class name="com.tests.android.dp.CommunityMainTabClick"></class>-->
+        </classes>
+    </test>
+
+
+
+
+
+
+</suite>

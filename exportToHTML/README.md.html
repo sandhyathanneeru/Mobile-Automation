@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #000000;}
+.s3 { color: #008000; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+README.md</font>
+</center></td></tr></table>
+<pre><span class="s0"># </span>Appium Mobile Automation Framework
+
+Framework for Mobile test automation (Native app and Browser) on Android and IOS devices :iphone:
+
+&lt;img src = &quot;https://user-images.githubusercontent.com/48508827/136083498-e707b438-0ade-47fc-bb2b-fce34f8d04e3.png&quot; width=&quot;500&quot; height=&quot;300&quot;&gt;
+
+<span class="s0">## </span>:rocket: Quick Start - Appium set up on Windows (Android):
+
+<span class="s0">1) </span>Install [Java JDK8](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
+   and [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
+<span class="s0">2) </span>Install [NodeJS](https://nodejs.org/en/download/)
+<span class="s0">3) </span>Install [Android studio](https://developer.android.com/studio)
+<span class="s0">4) </span>Install Appium Server using npm (CLI) command `npm install -g appium`. Appium server version 1.22.1
+
+<span class="s0">```</span>
+<span class="s3">Command to check the installed appium version: `appium --version`</span>
+<span class="s0">```</span>
+
+<span class="s0">5) </span>Add below Android SDK path in the environment variable
+
+<span class="s0">```</span>
+    <span class="s3">- ANDROID_HOME = &lt;path to Sdk folder&gt;</span>
+    <span class="s3">- %ANDROID_HOME%\tools</span>
+    <span class="s3">- %ANDROID_HOME%\tools\bin</span>
+    <span class="s3">- %ANDROID_HOME%\platform-tools</span>
+<span class="s0">```</span>
+
+<span class="s0">6) </span>Install [Appium desktop](https://github.com/appium/appium-desktop/releases/)
+<span class="s0">7) </span>Install [Appium Inspector](https://github.com/appium/appium-inspector/releases)
+
+<span class="s0">## </span>:rocket: Quick Start - Appium set up on MAC (Android):
+
+<span class="s0">1) </span>Install Homebrew
+<span class="s0">2) </span>Install [NodeJS](https://nodejs.org/en/download/)
+<span class="s0">3) </span>Install [Java JDK8](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
+   and [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
+<span class="s0">4) </span>Install Appium server using npm (CLI) or Appium desktop client
+<span class="s0">5) </span>Install [Android studio](https://developer.android.com/studio)
+<span class="s0">6) </span>Install [Appium Inspector](https://github.com/appium/appium-inspector/releases)
+<span class="s0">7) </span>Set JAVA_HOME and ANDROID_HOME environment variables
+
+<span class="s0">## </span>:pushpin: Appium Doctor to verify the installations
+
+<span class="s0">1) </span>Install appium-doctor using command `npm install -g appium-doctor`
+<span class="s0">2) </span>To view the list of available options `appium-doctor --help`
+
+<span class="s0">```</span>
+<span class="s3">To check Android set up `appium-doctor --android`</span>
+<span class="s3">To check ios set up `appium-doctor --ios`</span>
+<span class="s0">```</span>
+
+<span class="s0">## </span>:pushpin: Creating Android Virtual Device (Emulator) from Android Studio:
+
+<span class="s0">1) </span>Open Android Studio.
+<span class="s0">2) </span>Click on Tools -&gt; AVD Manager -&gt; Create Virtual Device -&gt; Select the device and OS version -&gt; Finish.
+<span class="s0">3) </span>Once Virtual device is created, click on Launch this AVD in the emulator.
+<span class="s0">4) </span>Command to view the list of devices attached `adb devices`
+
+<span class="s0">## </span>:pushpin: Android Real Device Set up:
+
+<span class="s0">1) </span>Connect Android real device to the machine(Desktop/Laptop)
+<span class="s0">2) </span>Turn on the developer options in android mobile
+<span class="s0">3) </span>Enable USB debugging
+<span class="s0">4) </span>Run command `adb devices` in cmd prompt to check whether the device is recognised
+
+<span class="s0">## </span>:pushpin: Mirror android/ios device to your desktop
+
+<span class="s0">1) </span>Download [Vysor](https://www.vysor.io/)
+
+<span class="s0">## </span>:pushpin: Start Android Emulator from Command line
+
+<span class="s0">1) </span>Open command prompt, go to `&lt;sdk emulator path&gt;`
+
+<span class="s0">```</span>
+<span class="s3">Command to stard AVD: `emulator -avd &lt;avd_name&gt;`</span>
+<span class="s3">Command to stop/kill AVD: `adb -e emu kill`</span>
+<span class="s0">```</span>
+
+<span class="s0">## </span>:pushpin: Pushing the App (.apk file) to Android Emulator:
+
+<span class="s0">1) </span>Copy the .apk file and paste it in the path - `&lt;path to sdk platform-tools&gt;`
+<span class="s0">2) </span>Open the cmd terminal from the directory where APK file is placed and enter command `adb install &lt;apk filename&gt;`
+
+<span class="s0">## </span>:pushpin: Android - Finding appPackage and appActivity:
+
+If the app is already installed on your device then we can make use of appPackage and appActivity to launch the app
+
+&lt;b&gt; Option 1 : &lt;/b&gt;
+1) Open the app on the device, for which appPackage and appActivity is required.
+2) Open powershell and enter command `adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'`
+NOTE: This command may not work for newer Android OS (10 or 11). In that case, use command:
+   `adb shell &quot;dumpsys activity activities | grep mResumedActivity&quot;`
+
+&lt;b&gt; Option 2 : &lt;/b&gt;
+Install &lt;b&gt; APK info &lt;/b&gt; app to retrieve appPackage and appActivity for the app installed in your device
+
+<span class="s0">## </span>:pushpin: Inspecting Elements
+
+<span class="s0">### </span>uiautomatorviewer
+
+<span class="s0">1) </span>Go to the path - `&lt;path to sdk folder&gt;\tools\bin\`
+<span class="s0">2) </span>click on `uiautomatorviewer`
+<span class="s0">3) </span>On the UI Automator Viewer, click on Device Screenshot (uiautomator dump). Ui automator will capture the screenshot
+   of current open screen in the device.
+
+&lt;img width=&quot;700&quot; height=&quot;450&quot; alt=&quot;UiAutomatorViewer&quot; src=&quot;https://user-images.githubusercontent.com/48508827/136441564-56869f6b-d220-4114-b00b-1312957f3d5b.png&quot;&gt;
+
+<span class="s0">### </span>Appium Inspector
+
+<span class="s0">1) </span>Start the Appium Server and connect with Real device/Emulator.
+<span class="s0">2) </span>Open Appium Inspector app and provide the appium server details and Desired Capabilities.
+
+&lt;img width=&quot;700&quot; alt=&quot;Appium Inspector&quot; src=&quot;https://user-images.githubusercontent.com/48508827/136668610-7507a27d-1304-490a-b954-687d3bf6caa2.png&quot;&gt;
+
+<span class="s0">3) </span>Click on Start session which will start the appium inspector with layout shown below.
+
+&lt;img width=&quot;700&quot; alt=&quot;Appium &quot; src=&quot;https://user-images.githubusercontent.com/48508827/136668632-343aab0d-9eef-4a2d-beee-fa35825f361a.png&quot;&gt;
+
+<span class="s0">## </span>:pushpin: Inspecting Element for mobile web browser
+
+<span class="s0">```</span>
+<span class="s3">Type url `chrome://inspect/#devices` in the desktop chrome browser and start inspecting element</span>
+<span class="s0">```</span>
+
+&lt;img width=&quot;800&quot; alt=&quot;Capture&quot; src=&quot;https://user-images.githubusercontent.com/48508827/146682499-00cb158a-5f9b-4daf-87ba-ca197b2804de.PNG&quot;&gt;
+
+<span class="s0">## </span>:pushpin: Launching Android Emulator Automatically
+
+Add below lines in the Desired capabilities
+
+<span class="s0">```</span>
+<span class="s3">capability.setCapability(AndroidMobileCapabilityType.AVD, &quot;Pixel_3a&quot;);</span>
+<span class="s3">capability.setCapability(AndroidMobileCapabilityType.AVD_LAUNCH_TIMEOUT, &quot;180000&quot;);</span>
+<span class="s0">```</span>
+
+<span class="s0">## </span>:pushpin: Auto Discovery of compatible ChromeDriver
+
+Start appium server using command `appium --allow-insecure chromedriver_autodownload`
+
+<span class="s0">## </span>:pushpin: Auto download of compatible ChromeDriver programmatically
+
+Add below line in the `AppiumServiceBuilder`
+
+<span class="s0">```</span>
+<span class="s3">AppiumServiceBuilder builder = new AppiumServiceBuilder();</span>
+<span class="s3">builder.withArgument(GeneralServerFlag.ALLOW_INSECURE, &quot;chromedriver_autodownload&quot;);</span>
+<span class="s0">```</span>
+
+<span class="s0">## </span>:pushpin: Start Appium server programmatically
+
+Use `AppiumServiceBuilder` and `AppiumDriverLocalService` to start the server programmatically Set environment
+variable `APPIUM_HOME = &lt;path to npm folder&gt;\node_modules\appium\build\lib` where `main.js` file is present
+
+<span class="s0">## </span>:pushpin: Key Features
+
+:point_right: Supports Android and iOS Real Devices and Emulators.
+
+:point_right: Ability to start and stop the appium server on run-time. Configurable through `config.properties`
+
+:point_right: Supports capturing appium server logs on run-time.
+
+:point_right: Page object model design.
+
+:point_right: Supports parallel and sequential execution of tests.
+
+:point_right: Ability to capture screen(video) recording of tests on Android and iOS. Configurable
+through `config.properties`
+
+:point_right: Supports capturing screenshots for passed/failed/skipped steps which is configurable
+through `config.properties`
+
+:point_right: Ability to retry failed tests which is configurable through `config.properties`
+
+:point_right: Customised exception handling to provide the exceptions in a meaningful way.
+
+:point_right: Custom framework annotation to provide author name and category for each test.
+
+:point_right: Supports utilities to read test data from excel workbook and provides data to each test based on the test
+name.
+
+<span class="s0">## </span>:pushpin: Running tests through Maven
+
+:point_right: Run test using command `mvn test -Dsurefire.suiteXmlFiles=&lt;provide the testng xml to execute&gt;`
+
+<span class="s0">## </span>:pushpin: Running tests through testng xml
+
+:point_right: Create or Select the required testng xml -&gt; Right click and select Run
+
+<span class="s0">## </span>:pushpin: Custom Configurations in config.properties
+
+&lt;img width=&quot;550&quot; alt=&quot;Capture&quot; src=&quot;https://user-images.githubusercontent.com/48508827/150834643-8c995b84-ffb7-4f0e-9ccd-4d1019440f2a.PNG&quot;&gt;
+
+<span class="s0">## </span>:pushpin: Report (Extent reports)
+
+![Web capture_24-1-2022_224531_](https://user-images.githubusercontent.com/48508827/150834585-bf17de21-9e56-494c-b0f6-9ba8451638e6.jpeg)
+
+![Web capture_24-1-2022_224634_](https://user-images.githubusercontent.com/48508827/150834616-3c15ee3a-67cd-4e90-90c7-1f664848fd82.jpeg)
+
+</pre>
+</body>
+</html>

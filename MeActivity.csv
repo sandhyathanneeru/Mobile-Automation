@@ -1,0 +1,2 @@
+variableName,default,id,css,name,linkText,partialLinkText,className,xpath
+ordersButton,xpath,com.sephora:id/track_orders_container,,,,,,//android.view.ViewGroup[@resource-id="com.sephora:id/track_orders_container"]
